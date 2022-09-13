@@ -1,0 +1,33 @@
+div.no-favorites {
+  position: relative;
+  top: 5.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.favorites-container {
+  position: relative;
+  top: 5.25rem;
+}
+
+::ng-deep .mat-grid-tile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px !important;
+}
+
+button.remove-favorite {
+  width: 120px;
+  height: 40px;
+}
+
+img.favorite-image {
+  width: 100%;
+}
+
+.active {
+  box-shadow: 0 3px 10px grey;
+}

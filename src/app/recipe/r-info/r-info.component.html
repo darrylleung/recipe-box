@@ -1,0 +1,64 @@
+<div class="recipe-info" *ngIf="recipe$ | async as recipe">
+  <div class="r-info-container-top">
+    <div class="r-info-container-top-left">
+      <h1 class="info-title">{{ recipe.title }}</h1>
+      <div class="info-details">
+        <h4>
+          <div class="info-details-exact">
+            <span><strong>Servings:</strong></span>
+            <span class="info-details-units"> {{ recipe.servings }}</span>
+          </div>
+          <div class="info-details-exact">
+            <span><strong>Time:</strong></span>
+            <span class="info-details-units">
+              {{ recipe.readyInMinutes }} minutes
+            </span>
+          </div>
+        </h4>
+        <button
+          (click)="addFavorite({
+                  id: recipe.id,
+                  title: recipe.title,
+                  image: recipe.image
+                })
+          "
+          class="add-favorite"
+          mat-flat-button
+          color="accent"
+        >
+          Add Favorite
+      </button>
+      </div>
+    </div>
+    <div class="r-info-container-top-right">
+      <div class="image-container">
+        <img [src]="recipe.image" class="recipe-image" />
+      </div>
+      <h2 class="summary">Summary</h2>
+      <p [innerHtml]="recipe.summary" class="summary-text"></p>
+    </div>
+  </div>
+
+  <div class="r-info-container-bottom">
+    <div class="r-info-container-bottom-left">
+      <h2>Ingredients</h2>
+      <ul>
+        <li *ngFor="let ingredients of recipe.extendedIngredients">
+          <strong>{{ ingredients.amount }} {{ ingredients.unit }}</strong>
+          {{ ingredients.originalName }}
+        </li>
+      </ul>
+    </div>
+    <div class="r-info-container-bottom-right">
+      <h2>Instructions</h2>
+      <div *ngFor="let instructions of recipe.analyzedInstructions">
+        <div *ngFor="let step of instructions.steps">
+          <strong>Step {{ step.number }}</strong>
+          <p class="step-text">
+            {{ step.step }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

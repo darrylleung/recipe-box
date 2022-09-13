@@ -1,0 +1,40 @@
+<div class="nav">
+  <div class="title-container" routerLink="">
+    <h1 class="title">Recipe Box</h1>
+  </div>
+  <div class="input-container">
+  <form>
+      <mat-form-field style="width: 100%">
+        <input
+          type="text"
+          placeholder="Search for your favorite recipes"
+          matInput
+          [formControl]="recipeList"
+          [matAutocomplete]="auto"
+        />
+
+        <mat-autocomplete
+          autoActiveFirstOption
+          #auto="matAutocomplete"
+          [displayWith]="recipeDisplayValue"
+          (optionSelected)="onRecipeSelect($event)"
+        >
+          <mat-option
+            *ngFor="let recipe of recipeList$ | async"
+            [value]="recipe"
+          >
+            {{ recipe.title }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+  </div>
+  <button 
+    class="favorites"
+    mat-flat-button 
+    color="primary"
+    routerLink="/favorites"
+  >
+    Favorites
+  </button>
+</div>

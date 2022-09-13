@@ -1,0 +1,18 @@
+<div
+  class="home"
+  (click)="onRecipeSelect(896900)"
+  (mouseenter)="mouseEnter()"
+  (mouseleave)="mouseLeave()"
+>
+  <div
+    [ngClass]="
+      isHoverActive ? 'highlight-container active' : 'highlight-container'
+    "
+  >
+    <h1 class="highlight">A Taste of Summer</h1>
+    <h4><i>“Do the Dew”</i> Doritos Mojito</h4>
+  </div>
+</div>
+
+<!-- [ngClass]="
+isHoverActive ? 'highlight-container:active' : 'highlight-container'" -->

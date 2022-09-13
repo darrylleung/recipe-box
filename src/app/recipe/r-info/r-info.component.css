@@ -1,0 +1,119 @@
+div.recipe-info {
+  top: 5.25rem;
+  position: relative;
+}
+
+/* Top Container */
+
+div.r-info-container-top {
+  display: flex;
+  width: 100%;
+  padding-top: 40px;
+  border-bottom: 3px solid #3f51b5;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+div.r-info-container-top-left {
+  width: 500px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  padding-left: 100px;
+  padding-right: 40px;
+  min-width: 400px;
+}
+
+div.info-details {
+  line-height: normal;
+  margin-top: 20px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  grid-row-start: 8;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+span.info-details-units {
+  padding-left: 10px;
+}
+
+h1.info-title {
+  font-size: 36px;
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  line-height: 1.2;
+}
+
+button.add-favorite {
+  width: 120px;
+  height: 40px;
+}
+
+div.r-info-container-top-right {
+  width: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  padding: 0 100px 40px 40px;
+}
+
+div.image-container {
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+img.recipe-image {
+  width: 100%;
+}
+
+h2.summary {
+  margin-right: auto;
+  width: 100%;
+}
+
+p.summary-text {
+  line-height: 1.7;
+}
+
+/* Bottom Container */
+
+div.r-info-container-bottom {
+  display: flex;
+  width: 100%;
+  padding-top: 40px;
+}
+
+div.r-info-container-bottom-left {
+  width: 500px;
+  position: relative;
+  padding-left: 100px;
+  padding-right: 40px;
+  min-width: 400px;
+}
+
+div.r-info-container-bottom-right {
+  width: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 400px;
+  padding: 0 100px 40px 40px;
+}
+
+ul {
+    list-style: none;
+    line-height: 2;
+}
+
+p.step-text {
+  line-height: 1.7;
+}

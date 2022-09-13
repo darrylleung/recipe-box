@@ -1,0 +1,29 @@
+<div *ngIf="favorites$ | async as favorites" class="favorites-container">
+  <div *ngIf="favorites.length > 0; else noFavorites">
+    <mat-grid-list cols="3" rowHeight="1:1">
+      <div *ngFor="let favorite of favorites$ | async">
+        <mat-grid-tile
+          id="{{ favorite.id }}"
+          (click)="onRecipeSelect(favorite.id)"
+        >
+          <img src="{{ favorite.image }}" class="favorite-image" />
+          <h3>{{ favorite.title }}</h3>
+          <button
+            (click)="removeFavorite(favorite.id)"
+            mat-flat-button
+            color="warn"
+            class="remove-favorite"
+          >
+            Remove
+          </button>
+        </mat-grid-tile>
+      </div>
+    </mat-grid-list>
+  </div>
+</div>
+
+<ng-template #noFavorites>
+  <div class="no-favorites">
+    <h2>Saved favorites will be shown here 😋</h2>
+  </div>
+</ng-template>

@@ -1,0 +1,37 @@
+/* img.home {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+} */
+
+div.home {
+  position: relative;
+  top: 5.25rem;
+  height: 89.4%;
+  background: url("https://spoonacular.com/recipeImages/896900-556x370.jpg")
+    no-repeat center center/cover;
+}
+
+div.highlight-container {
+  position: relative;
+  top: 55%;
+  left: 65%;
+  width: 300px;
+  height: 250px;
+  min-width: 200px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.active {
+  box-shadow: 0 3px 10px grey;
+}
+
+h1.highlight {
+  font-size: 1.75rem;
+}
